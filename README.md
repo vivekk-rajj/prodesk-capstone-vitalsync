@@ -266,5 +266,5 @@ The wireframe specification is documented in [`docs/wireframes.md`](docs/wirefra
 ## 14. Submission Links
 
 - **GitHub repository:** https://github.com/vivekk-rajj/prodesk-capstone-vitalsync
-- **Figma:** `FIGMA_LINK_PENDING`
+- **Figma:** `https://www.figma.com/design/PralBDxLJIJji3gLhrnZ4J/Untitled?t=h1RPR4WgQWJkSLGi-1`
 - **Demo video:** `DEMO_VIDEO_LINK_PENDING`
