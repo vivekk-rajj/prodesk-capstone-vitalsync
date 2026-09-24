@@ -4,7 +4,7 @@
 
 ## 1. Product Overview
 
-VitalSync centralizes appointment scheduling, patient medical histories, prescriptions, and provider availability in one role-aware web application. The MVP focuses on a reliable workflow for patients to request care, doctors to review clinical context, and administrators to coordinate operational capacity.
+VitalSync centralizes appointment scheduling, patient medical histories, prescriptions, and provider availability in one role-aware web application. The MVP focuses on a reliable workflow for patients, doctors, and administrators to coordinate care without friction. The goal is to demonstrate a polished healthcare workflow with secure state transitions and role-aware visibility.
 
 ### Problem Statement
 
@@ -191,7 +191,7 @@ References use MongoDB `ObjectId` values. Clinical records are append-oriented w
 
 ## 10. UI/UX Wireframe Plan
 
-The Figma file will contain responsive wireframes for at least these viewports:
+The Figma file contains responsive wireframes for at least these viewports:
 
 1. **Authentication screen** — login, registration, validation, password visibility, and responsive mobile arrangement.
 2. **Patient dashboard** — upcoming appointment card, provider search, prescription status, timeline preview, and mobile bottom navigation.
@@ -201,7 +201,7 @@ The Figma file will contain responsive wireframes for at least these viewports:
 
 ### Figma Design Link
 
-**To be replaced with the public Figma file URL:** `FIGMA_LINK_PENDING`
+https://www.figma.com/design/PralBDxLJIJji3gLhrnZ4J/Untitled?t=h1RPR4WgQWJkSLGi-1
 
 The wireframe specification is documented in [`docs/wireframes.md`](docs/wireframes.md). The final Figma file must be set to public or “anyone with the link can view” before submission.
 
@@ -260,11 +260,11 @@ The wireframe specification is documented in [`docs/wireframes.md`](docs/wirefra
 - [x] Five-collection data model planned.
 - [x] REST endpoint contract drafted.
 - [x] Architecture/ERD diagram embedded.
-- [ ] Public Figma URL inserted in place of `https://www.figma.com/design/PralBDxLJIJji3gLhrnZ4J/Untitled?t=h1RPR4WgQWJkSLGi-1`.
+- [x] Public Figma URL inserted.
 - [x] AI planning questions recorded in [`Prompts.md`](Prompts.md).
 
 ## 14. Submission Links
 
 - **GitHub repository:** https://github.com/vivekk-rajj/prodesk-capstone-vitalsync
-- **Figma:** `https://www.figma.com/design/PralBDxLJIJji3gLhrnZ4J/Untitled?t=h1RPR4WgQWJkSLGi-1`
+- **Figma:** https://www.figma.com/design/PralBDxLJIJji3gLhrnZ4J/Untitled?t=h1RPR4WgQWJkSLGi-1
 - **Demo video:** `DEMO_VIDEO_LINK_PENDING`
