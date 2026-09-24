@@ -260,7 +260,7 @@ The wireframe specification is documented in [`docs/wireframes.md`](docs/wirefra
 - [x] Five-collection data model planned.
 - [x] REST endpoint contract drafted.
 - [x] Architecture/ERD diagram embedded.
-- [ ] Public Figma URL inserted in place of `FIGMA_LINK_PENDING`.
+- [ ] Public Figma URL inserted in place of `https://www.figma.com/design/PralBDxLJIJji3gLhrnZ4J/Untitled?t=h1RPR4WgQWJkSLGi-1`.
 - [x] AI planning questions recorded in [`Prompts.md`](Prompts.md).
 
 ## 14. Submission Links
