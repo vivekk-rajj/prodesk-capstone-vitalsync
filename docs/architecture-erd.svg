@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="920" viewBox="0 0 1400 920" role="img" aria-labelledby="title desc">
+  <title id="title">VitalSync System Architecture and MongoDB ERD</title>
+  <desc id="desc">React client connects to Express API, which connects to MongoDB collections Users, ProviderProfiles, Appointments, MedicalRecords, and Prescriptions.</desc>
+  <style>
+    .bg{fill:#f8fafc}.box{fill:#ffffff;stroke:#334155;stroke-width:2;rx:12}.api{fill:#dbeafe;stroke:#2563eb}.db{fill:#dcfce7;stroke:#16a34a}.title{font:700 26px Arial;fill:#0f172a}.head{font:700 18px Arial;fill:#0f172a}.text{font:14px Arial;fill:#334155}.small{font:12px Arial;fill:#475569}.line{stroke:#64748b;stroke-width:2;fill:none;marker-end:url(#arrow)}.rel{stroke:#16a34a;stroke-width:2;fill:none;stroke-dasharray:7 5}.label{font:12px Arial;fill:#166534;background:#f8fafc}
+  </style>
+  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#64748b"/></marker></defs>
+  <rect class="bg" width="1400" height="920"/>
+  <text class="title" x="50" y="48">VitalSync — Fullstack System Architecture &amp; MongoDB ERD</text>
+
+  <rect class="box" x="50" y="100" width="260" height="145"/>
+  <text class="head" x="75" y="135">React Web Client</text>
+  <text class="text" x="75" y="163">React + Vite</text><text class="text" x="75" y="185">Tailwind + shadcn/ui</text><text class="text" x="75" y="207">TanStack Query / Auth Context</text>
+
+  <rect class="box api" x="430" y="100" width="310" height="145"/>
+  <text class="head" x="455" y="135">Express REST API</text>
+  <text class="text" x="455" y="163">JWT middleware</text><text class="text" x="455" y="185">RBAC + ownership checks</text><text class="text" x="455" y="207">Validation / services / audit events</text>
+
+  <rect class="box db" x="880" y="100" width="330" height="145"/>
+  <text class="head" x="905" y="135">MongoDB Atlas</text>
+  <text class="text" x="905" y="163">Mongoose models</text><text class="text" x="905" y="185">Indexes and conflict checks</text><text class="text" x="905" y="207">Five bounded collections</text>
+
+  <path class="line" d="M310 172 H430"/><text class="small" x="340" y="158">HTTPS / JSON</text>
+  <path class="line" d="M740 172 H880"/><text class="small" x="775" y="158">Mongoose</text>
+
+  <text class="head" x="50" y="315">Collections and relationships</text>
+
+  <rect class="box db" x="50" y="350" width="235" height="220"/>
+  <text class="head" x="75" y="385">Users</text><text class="text" x="75" y="414">_id</text><text class="text" x="75" y="437">email, passwordHash</text><text class="text" x="75" y="460">role, status</text><text class="text" x="75" y="483">name, contact</text><text class="text" x="75" y="506">createdAt, updatedAt</text><text class="small" x="75" y="543">Identity and access source</text>
+
+  <rect class="box db" x="350" y="350" width="235" height="220"/>
+  <text class="head" x="375" y="385">ProviderProfiles</text><text class="text" x="375" y="414">_id</text><text class="text" x="375" y="437">userId → Users</text><text class="text" x="375" y="460">specialty, license</text><text class="text" x="375" y="483">availabilityBlocks[]</text><text class="text" x="375" y="506">active</text><text class="small" x="375" y="543">Doctor-specific profile</text>
+
+  <rect class="box db" x="650" y="350" width="235" height="220"/>
+  <text class="head" x="675" y="385">Appointments</text><text class="text" x="675" y="414">_id</text><text class="text" x="675" y="437">patientId → Users</text><text class="text" x="675" y="460">providerId → Users</text><text class="text" x="675" y="483">startAt, endAt</text><text class="text" x="675" y="506">status, reason</text><text class="small" x="675" y="543">Scheduling aggregate</text>
+
+  <rect class="box db" x="950" y="350" width="235" height="220"/>
+  <text class="head" x="975" y="385">MedicalRecords</text><text class="text" x="975" y="414">_id</text><text class="text" x="975" y="437">patientId → Users</text><text class="text" x="975" y="460">authorId → Users</text><text class="text" x="975" y="483">type, summary</text><text class="text" x="975" y="506">occurredAt, details</text><text class="small" x="975" y="543">Append-oriented timeline</text>
+
+  <rect class="box db" x="500" y="680" width="280" height="175"/>
+  <text class="head" x="525" y="715">Prescriptions</text><text class="text" x="525" y="744">_id</text><text class="text" x="525" y="767">patientId → Users</text><text class="text" x="525" y="790">prescriberId → Users</text><text class="text" x="525" y="813">medication, instructions</text><text class="text" x="525" y="836">status, issuedAt</text>
+
+  <path class="rel" d="M285 445 H350"/><path class="rel" d="M285 475 C430 475 500 440 650 440"/><path class="rel" d="M285 500 C500 590 720 590 950 475"/>
+  <path class="rel" d="M285 520 C400 650 450 710 500 750"/><path class="rel" d="M285 535 C420 700 500 785 500 785"/>
+  <path class="rel" d="M585 445 H650"/>
+  <path class="rel" d="M885 465 H950"/>
+  <path class="rel" d="M765 570 C780 640 760 675 730 680"/>
+
+  <text class="small" x="50" y="890">Dashed green lines represent ObjectId references; clinical access is enforced by API authorization, not by the client UI.</text>
+</svg>
